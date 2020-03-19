@@ -11,7 +11,7 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <h2>Bienvenido mamaverga v2</h2>
+                <h2>Bienvenido mamaverga vKubernetes</h2>
                 <Link to="/">Home</Link>
                 <Link to="/otherPage">Otra :S</Link>
             </header>
