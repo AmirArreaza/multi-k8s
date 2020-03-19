@@ -12,10 +12,6 @@ spec:
       labels:
         component: postgres
     spec:
-      volumes:
-        - name: postgres-storage
-          persistentVolumeClaim:
-              claimName: database-persistent-volume-claim
       containers:
         - name: postgres
           image: postgres
@@ -24,9 +20,14 @@ spec:
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/data
+              readOnly: false
           env:
             - name: POSTGRES_PASSWORD
               valueFrom:
                   secretKeyRef:
                     name: pgpassword2
                     key: POSTGRES_PASSWORD
+      volumes:
+        - name: postgres-storage
+          persistentVolumeClaim:
+              claimName: database-persistent-volume-claim
