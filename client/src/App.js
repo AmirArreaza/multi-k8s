@@ -11,11 +11,7 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-<<<<<<< HEAD
                 <h2>Bienvenido mamaverga v2 Kubernetes + Skaffold!</h2>
-=======
-                <h2>Bienvenido mamaverga vKubernetes</h2>
->>>>>>> 683cfa70f03ce1fe91f4974e8c148e066af30090
                 <Link to="/">Home</Link>
                 <Link to="/otherPage">Otra :S</Link>
             </header>
